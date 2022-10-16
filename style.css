@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-image: linear-gradient(180deg, #fff5a0, #f8b2b1, #c06ee0);
+    color: #ffffff;
+    font-family: 'Rancho', cursive;
+    font-weight: 200;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 40px;
+    padding: 20px;
+    text-shadow: 3px 2px 2px black;
+    margin-top: 40px;
+}
+
+header, form {
+    min-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 25px;
+    font-family: 'Rancho', cursive;
+    background: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 2px 2px rgb(138, 138, 138);
+    min-width: 2rem;
+}
+
+form button {
+    justify-content: center;
+    color: #c06ee0;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    background: #ffffff;
+    border: solid;
+    border-color: black;
+    border-radius: 1%;
+    color: #f8b2b1;
+}
+
+.to-do-cont {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.to-do-list {
+    list-style: none;
+    min-width: 16.5%;
+}
+
+.task {
+    align-items: center;
+    background: rgb(255, 255, 255);
+    color: rgb(24, 22, 22);
+    display: flex;
+    font-size: 25px;
+    justify-content: space-between;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.task li {
+    flex: 1;
+}
+
+.to-do-item {
+    padding: 0rem 0.5rem;
+}
+
+.remove-button, .done-button{
+    border:rgb(255, 255, 255);
+    border-radius: 15%;
+    border-style: double;
+    background:#e06e6e;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 15px;
+    padding: 1rem;
+}
+
+.done-button {
+    background: #a1e06e;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+    color: red;
+
+}
+
+.removed {
+    transform: translateY(6rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px rgb(138, 138, 138);
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:#c06ee0;
+    top: 0;
+    transition: all 0.5s ease;
+    right: 0;
+    padding:0.8rem;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background:#000000;
+    color: #c06ee0;
+}
+
+select {
+    color:#c06ee0;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0.5rem;
+    width:11rem;
+}
